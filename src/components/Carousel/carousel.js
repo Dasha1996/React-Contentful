@@ -11,9 +11,6 @@ SwiperCore.use([Navigation]);
 
 function Carousel  () {
     const {isCarouselLoading, carouselSlides } = useContext(Context)
-    //cleanup data returned from contentful
-  
-
     if(isCarouselLoading) {
       return <Loader/>
     }

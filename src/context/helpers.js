@@ -9,6 +9,7 @@ export const getHTMLData = (rawData) => {
     return sanitazedHTMLString;
 }
 
+//cleanup data returned from contentful
 export const cleanUpAbout = (rawData) => {
     const {sys, fields} = rawData
     const {id} = sys

@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import About from './components/About/About';
+import Carousel from './components/Carousel/carousel'
+import Loader from './components/Loader/Loader';
+import { Context, Provider } from './context/Context';
 
 function App() {
+  console.log(Context)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider>
+        <div className="App">
+          <Carousel></Carousel>
+          <About/>
+        </div>
+    </Provider>
   );
 }
 
